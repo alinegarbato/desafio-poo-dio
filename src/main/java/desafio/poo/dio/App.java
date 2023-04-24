@@ -3,12 +3,42 @@
  */
 package desafio.poo.dio;
 
-public class App {
-    public String getGreeting() {
-        return "Hello World!";
-    }
+import br.com.dio.desafio.dominio.Curso;
+import br.com.dio.desafio.dominio.Mentoria;
+import java.time.LocalDate;
 
+public class App {
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
-    }
+        
+        //Estanciando um objeto
+        Curso curso1 = new Curso();
+        
+        //Atribuindo valores com o método set
+        
+        curso1.setTitulo("Curso java");
+        curso1.setDescricao("Descrição curso java");
+        curso1.setCargaHoraria(8);
+        
+        //Estanciando um objeto
+        Curso curso2 = new Curso();
+        
+        //Atribuindo valores com o método set
+        
+        curso1.setTitulo("Curso js");
+        curso1.setDescricao("Descrição curso js");
+        curso1.setCargaHoraria(4);
+        
+        //Criando a Mentoria
+        
+        Mentoria mentoria = new Mentoria();
+        
+        mentoria.setTitulo("Mentoria de java");
+        mentoria.setDescricao("Descrição Mentoria de Java");
+        mentoria.setData(LocalDate.now());
+        
+        
+        System.out.println(curso1);
+        System.out.println(curso2);
+        System.out.println(mentoria);
+}
 }
